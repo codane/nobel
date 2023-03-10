@@ -1,16 +1,31 @@
 # nobel
 
-A new Flutter project.
 
-## Getting Started
+Nobel is a Flutter app that displays the data from the NobelPrize API.
 
-This project is a starting point for a Flutter application.
+## Packages used
+- [dio](https://pub.dev/packages/dio) - to fetch data from the API 
+- [freezed](https://pub.dev/packages/freezed) - to generate model classes
+- [flutter_riverpod](https://pub.dev/packages/flutter_riverpod) - for state management
+- [lottie](https://pub.dev/packages/lottie) - for animations
+- [flutter_svg](https://pub.dev/packages/flutter_svg) - to display illustrations in SVG format
+- [url_launcher](https://pub.dev/packages/url_launcher) - to launch the URL in browser
+- [flutter_launcher_icons](https://pub.dev/packages/flutter_launcher_icons) - to create the app launcher icon
 
-A few resources to get you started if this is your first Flutter project:
+## Assets
+- illustrations - [unDraw](https://undraw.co/)
+- golden wreath used for splash screen and app icon - [Pixabay](https://pixabay.com/)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Screenshots
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![nobel_screenshot_home](https://user-images.githubusercontent.com/44852491/223187398-34ab39f4-a979-40cd-9d8d-30745572d76e.png)
+![nobel_screenshot_list](https://user-images.githubusercontent.com/44852491/223187442-a04be68f-94a2-4918-9683-17187fde2de7.png)
+![nobel_screenshot_detail](https://user-images.githubusercontent.com/44852491/223187471-2ed91960-8f70-4e84-b1f7-c777caa46e2e.png)
+![nobel_screenshot_wiki](https://user-images.githubusercontent.com/44852491/223187498-b89bdf2b-f28c-4269-8534-3a4f8d110e0d.png)
+
+
+
+
+
+
+
