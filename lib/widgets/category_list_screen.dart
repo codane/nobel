@@ -78,7 +78,7 @@ class _CategoryListScreenState extends ConsumerState<CategoryListScreen> {
 
   void paginate() {
     if (_controller.position.pixels == _controller.position.maxScrollExtent) {
-      ref.read(apiOffsetProvider.notifier).state += 10;
+      ref.read(apiOffsetProvider.notifier).state += 15;
     }
   }
 

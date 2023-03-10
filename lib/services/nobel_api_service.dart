@@ -9,7 +9,7 @@ final nobelApiProvider = Provider.autoDispose<NobelApiService>((ref) => NobelApi
 class NobelApiService {
   final Dio _dio = Dio();
   final String _baseUrl = "https://api.nobelprize.org/2.1/laureates";
-  final int _limit = 10;
+  final int _limit = 15;
 
   Future<LaureatesResponse> getApiData({required int apiOffset, required String categoryAbbreviation}) async {
     try {
