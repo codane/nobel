@@ -16,9 +16,9 @@ class NobelApiService {
       final apiResponse = await _dio.get("$_baseUrl?offset=$apiOffset&limit=$_limit&nobelPrizeCategory=$categoryAbbreviation");
       final LaureatesResponse laureatesResponse = LaureatesResponse.fromJson(apiResponse.data);
       return laureatesResponse;
-    } catch (e) {
+    } on DioError catch (e) {
       log(e.toString());
-      rethrow;
+      throw Exception(e.message);
     }
     
   }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:nobel/widgets/category_list_screen.dart';
+import 'package:nobel/screens/category_list_screen.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:nobel/providers/nobel_providers.dart';
 
