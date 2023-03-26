@@ -43,6 +43,7 @@ dependencies:
   flutter_svg: ^2.0.2
   lottie: ^2.2.0
   url_launcher: ^6.1.8
+  connectivity_plus: ^3.0.3
   
   
   

@@ -20,6 +20,7 @@ class _CategoryListScreenState extends ConsumerState<CategoryListScreen> {
   final ScrollController _controller = ScrollController();
   final List<Laureate> _totalList = [];
 
+
   @override
   void initState() {
     _controller.addListener(_paginate);
