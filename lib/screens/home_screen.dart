@@ -6,36 +6,6 @@ import '../widgets/home_screen_top.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
 
 
-/* class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: const Color(0xffA4C2A5),
-      body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.only(left: 16, right: 16),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            mainAxisSize: MainAxisSize.max,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: const [
-              SizedBox(
-                height: 40,
-              ),
-              HomeScreenTop(),
-              Expanded(
-                child: HomeScreenGridView(),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-} */
-
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -44,33 +14,33 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  late ConnectivityResult result;
-  late StreamSubscription connectivitySubscription;
-  bool hasConnection = false;
+  late ConnectivityResult _result;
+  late StreamSubscription _connectivitySubscription;
+  bool _hasConnection = false;
 
   @override
   void initState() {
-    startStreaming();
+    _connectionStreaming();
     super.initState();
   }
 
   @override
   void dispose() {
-    connectivitySubscription.cancel();
+    _connectivitySubscription.cancel();
     super.dispose();
   }
 
-  Future<void> checkInternetConnection() async {
-    result = await Connectivity().checkConnectivity();
-    if (result != ConnectivityResult.none) {
-      hasConnection = true;
+  Future<void> _checkInternetConnection() async {
+    _result = await Connectivity().checkConnectivity();
+    if (_result != ConnectivityResult.none) {
+      _hasConnection = true;
     } else {
-      hasConnection = false;
-     showInternetDialogBox();
+      _hasConnection = false;
+     _showInternetDialogBox();
     }
   }
 
-  void showInternetDialogBox() {
+  void _showInternetDialogBox() {
     showDialog(
       barrierDismissible: false,
       context: context, 
@@ -80,15 +50,15 @@ class _HomeScreenState extends State<HomeScreen> {
       actions: [
         TextButton(onPressed: () {
           Navigator.pop(context);
-          checkInternetConnection();
+          _checkInternetConnection();
         }, child: const Text("Try again"))
       ],
     ));
   }
 
-  void startStreaming() {
-    connectivitySubscription = Connectivity().onConnectivityChanged.listen((event) async { 
-      checkInternetConnection();
+  void _connectionStreaming() {
+    _connectivitySubscription = Connectivity().onConnectivityChanged.listen((event) async { 
+      _checkInternetConnection();
     });
   }
 
