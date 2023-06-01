@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import '../theme/nobel_pallete.dart';
 import '../widgets/home_screen_grid_view.dart';
 import '../widgets/home_screen_top.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
@@ -65,7 +66,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xffA4C2A5),
+      backgroundColor: NobelPallete.nobelGreen,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.only(left: 16, right: 16),

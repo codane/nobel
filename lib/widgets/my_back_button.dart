@@ -7,7 +7,7 @@ class MyBackButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Material(
       borderRadius: BorderRadius.circular(50),
-      elevation: 10,
+      elevation: 0,
       child: Container(
         height: 50,
         width: 50,

@@ -52,7 +52,6 @@ class PrizeInfoContainer extends StatelessWidget {
           PrizeInfoRow(prizeRowText: "Category: $prizeCategory"),
           PrizeInfoRow(prizeRowText: "Award year: $prizeAwardYear"),
           PrizeInfoRow(prizeRowText: "Prize amount: $prizeAmount\$"),
-          PrizeInfoRow(prizeRowText: "Prize status: $prizeStatus"),
           PrizeInfoRow(prizeRowText: "Reason: $prizeMotivation"),          
         ],
       ),

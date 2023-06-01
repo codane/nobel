@@ -12,7 +12,7 @@ class LaureateItem extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(10),
       child: Material(
-        elevation: 10,
+        elevation: 0,
         borderRadius: const BorderRadius.all(Radius.circular(20)),
         child: Container(
           decoration: const BoxDecoration(
