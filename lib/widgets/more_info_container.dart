@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nobel/theme/nobel_palette.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class MoreInfoContainer extends StatelessWidget {
@@ -10,7 +11,7 @@ class MoreInfoContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(
-        color: Color(0xffD8DAD3),
+        color: NobelPalette.nobelGrey,
         borderRadius: BorderRadius.all(
           Radius.circular(20),
         ),

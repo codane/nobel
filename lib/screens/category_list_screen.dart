@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:nobel/providers/nobel_providers.dart';
 import 'package:nobel/screens/detail_screen.dart';
+import 'package:nobel/theme/nobel_palette.dart';
 import 'package:nobel/widgets/laureate_item.dart';
 import '../models/laureate/laureate_model.dart';
 import '../widgets/category_list_screen_row.dart';
@@ -46,7 +47,7 @@ class _CategoryListScreenState extends ConsumerState<CategoryListScreen> {
     _totalList.addAll(laureatesData);
 
     return Scaffold(
-      backgroundColor: const Color(0xffA4C2A5),
+      backgroundColor: NobelPalette.nobelGreen,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.only(left: 16, right: 16),

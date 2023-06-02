@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nobel/theme/nobel_palette.dart';
 
 class LaureateItem extends StatelessWidget {
   const LaureateItem(
@@ -16,7 +17,7 @@ class LaureateItem extends StatelessWidget {
         borderRadius: const BorderRadius.all(Radius.circular(20)),
         child: Container(
           decoration: const BoxDecoration(
-            color: Color(0xffD8DAD3),
+            color: NobelPalette.nobelGrey,
             borderRadius: BorderRadius.all(Radius.circular(20)),
           ),
           child: Row(
@@ -49,7 +50,7 @@ class LaureateItem extends StatelessWidget {
                 height: 50,
                 width: 50,
                 decoration: const BoxDecoration(
-                    color: Color(0xffD8DAD3), 
+                    color: NobelPalette.nobelGrey, 
                     shape: BoxShape.circle),
                 child: const Icon(Icons.arrow_forward),
               ),

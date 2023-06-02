@@ -5,6 +5,12 @@ import '../models/laureate/laureate_model.dart';
 
 part 'nobel_providers.freezed.dart';
 
+final apiOffsetProvider = StateProvider.autoDispose<int>((ref) => 0);
+final categoryAbbreviationProvider = StateProvider.autoDispose<String>((ref) => "");
+final laureateDataProvider = StateNotifierProvider.autoDispose<LaureatesNotifier, LaureatesState>((ref) {
+  return LaureatesNotifier(ref.watch(nobelApiProvider), ref.watch(apiOffsetProvider), ref.watch(categoryAbbreviationProvider));
+});
+
 @freezed
 class LaureatesState with _$LaureatesState {
 
@@ -13,12 +19,6 @@ class LaureatesState with _$LaureatesState {
   }) = _LaureatesState;
 }
 
-
-final apiOffsetProvider = StateProvider.autoDispose<int>((ref) => 0);
-final categoryAbbreviationProvider = StateProvider.autoDispose<String>((ref) => "");
-final laureateDataProvider = StateNotifierProvider.autoDispose<LaureatesNotifier, LaureatesState>((ref) {
-  return LaureatesNotifier(ref.watch(nobelApiProvider), ref.watch(apiOffsetProvider), ref.watch(categoryAbbreviationProvider));
-});
 
 class LaureatesNotifier extends StateNotifier<LaureatesState> {
   LaureatesNotifier(this.apiService, this.apiOffset, this.categoryAbbreviation) : super(LaureatesState()) {

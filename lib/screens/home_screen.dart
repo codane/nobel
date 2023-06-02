@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import '../theme/nobel_pallete.dart';
+import '../theme/nobel_palette.dart';
 import '../widgets/home_screen_grid_view.dart';
 import '../widgets/home_screen_top.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
@@ -17,10 +17,11 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   late ConnectivityResult _result;
   late StreamSubscription _connectivitySubscription;
-  bool _hasConnection = false;
+  bool hasConnection = false;
 
   @override
   void initState() {
+    _checkInternetConnection();
     _connectionStreaming();
     super.initState();
   }
@@ -34,9 +35,9 @@ class _HomeScreenState extends State<HomeScreen> {
   Future<void> _checkInternetConnection() async {
     _result = await Connectivity().checkConnectivity();
     if (_result != ConnectivityResult.none) {
-      _hasConnection = true;
+      hasConnection = true;
     } else {
-      _hasConnection = false;
+      hasConnection = false;
      _showInternetDialogBox();
     }
   }
@@ -65,16 +66,16 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: NobelPallete.nobelGreen,
+    return const Scaffold(
+      backgroundColor: NobelPalette.nobelGreen,
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.only(left: 16, right: 16),
+          padding:  EdgeInsets.only(left: 16, right: 16),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             mainAxisSize: MainAxisSize.max,
             crossAxisAlignment: CrossAxisAlignment.center,
-            children: const [
+            children:  [
               SizedBox(
                 height: 40,
               ),

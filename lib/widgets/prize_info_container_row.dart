@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nobel/theme/nobel_palette.dart';
 import 'package:nobel/widgets/prize_info_row.dart';
 
 class PrizeInfoContainer extends StatelessWidget {
@@ -23,7 +24,7 @@ class PrizeInfoContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(
-        color: Color(0xffD8DAD3),
+        color: NobelPalette.nobelGrey,
         borderRadius: BorderRadius.all(
           Radius.circular(20),
         ),

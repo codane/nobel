@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:nobel/screens/category_list_screen.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:nobel/providers/nobel_providers.dart';
+import 'package:nobel/theme/nobel_palette.dart';
 
 class CategoryCard extends ConsumerWidget {
   const CategoryCard(
@@ -34,7 +35,7 @@ class CategoryCard extends ConsumerWidget {
           borderRadius: const BorderRadius.all(Radius.circular(20),),
           child: Container(
             decoration: const BoxDecoration(
-              color: Color(0xffD8DAD3),
+              color: NobelPalette.nobelGrey,
               borderRadius: BorderRadius.all(Radius.circular(20),),
             ), 
             child: SvgPicture.asset(categorySvg),
