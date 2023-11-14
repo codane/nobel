@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nobel/screens/splash_screen.dart';
+import 'package:nobel/presentation/screens/splash_screen.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 void main() {
